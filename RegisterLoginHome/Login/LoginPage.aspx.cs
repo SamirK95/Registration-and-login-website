@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Drawing;
 
 public partial class Login_LoginPage : System.Web.UI.Page
 {
@@ -32,6 +33,7 @@ public partial class Login_LoginPage : System.Web.UI.Page
 
         if (brojPronadjenihKorisnika == 0)
         {
+            lblIspis.ForeColor = Color.Red;
             // Ako korisnik ne postoji u bazi podataka, ispisati poruku
             lblIspis.Text = "Registracija je neophodna. Molimo registrujte se!";
         }
@@ -55,6 +57,7 @@ public partial class Login_LoginPage : System.Web.UI.Page
             }
             else
             {
+                lblIspis.ForeColor = Color.Red;
                 // Ako lozinka nije ispravna, ispisi poruku
                 lblIspis.Text = "Pogrešan password. Pokušajte ponovo.";
             }

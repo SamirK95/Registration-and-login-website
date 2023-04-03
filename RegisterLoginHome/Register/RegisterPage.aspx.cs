@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Drawing;
 
 public partial class Register_RegisterPage : System.Web.UI.Page
 {
@@ -38,10 +39,12 @@ public partial class Register_RegisterPage : System.Web.UI.Page
 
         if (brojEmailova > 0)
         {
+            lblIspis.ForeColor = Color.Red;
             lblIspis.Text = "E-mail koji ste upisali već se koristi.";
         }
         else if (brojUsernamea > 0)
         {
+            lblIspis.ForeColor = Color.Red;
             lblIspis.Text = "Username već postoji.";
         }
         else
@@ -61,10 +64,12 @@ public partial class Register_RegisterPage : System.Web.UI.Page
 
             if (brojDodanihRedova == 1)
             {
+                lblIspis.ForeColor = Color.Green;
                 lblIspis.Text = "Uspješno ste se registrovali";
             }
             else
             {
+                lblIspis.ForeColor = Color.Red;
                 lblIspis.Text = "Neuspješna registracija!";
             }
         }
